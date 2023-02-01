@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --primary-color-darkCyan: hsl(158, 36%, 37%);
+    --primary-color-cream: hsl(30, 38%, 92%);
+    --primary-color-darkGreen: hsl(158, 36%, 20%);
+    --neutral-color-darkBlue: hsl(212, 21%, 14%);
+    --neutral-color-grayishBlue: hsl(228, 12%, 48%);
+    --white-color: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color-cream);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-container {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color-cream);
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 14px;
+}
+
+p,
+h2,
+button,
+.attribution {
+    font-family: "Montserrat";
+}
+
+h1.product-preview--title {
+    font-size: 36px;
+    color: var(--neutral-color-darkBlue);
+    font-family: "Fraunces";
+    margin: 0;
+    line-height: 1;
+    padding-right: 7rem;
+}
+
+main.container-flex {
+    display: flex;
+    max-width: 800px;
+    height: 570px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+
+main .img-container {
+    height: auto;
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+main .img-preview {
+    height: 100%;
+    background-image: url(/images/image-product-desktop.jpg);
+    background-position: center center;
+    min-height: 10rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-size: cover;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    background-size: cover;
+
+}
+
+.product-preview {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-preview h2 {
+    color: var(--neutral-color-grayishBlue);
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+
+.product-preview p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+    padding-right: 20px;
+    color: var(--neutral-color-grayishBlue);
+}
+
+span.price-large {
+    font-size: 36px;
+    color: var(--primary-color-darkCyan);
+    font-weight: bold;
+    font-family: "Fraunces";
+    display: inline;
+}
+
+span.price-small {
+    color: var(--neutral-color-grayishBlue);
+    display: inline;
+    vertical-align: super;
+    padding-left: 1.5rem;
+    text-decoration: line-through;
+}
+
+.btn-buy {
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--primary-color-darkCyan);
+    margin-top: 20px;
+    padding: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+
+    transition: .4s;
+}
+
+.btn-buy img {
+    margin-right: 10px;
+    width: 16px;
+    vertical-align: bottom;
+}
+
+.btn-buy:hover {
+    background-color: var(--primary-color-darkGreen);
+    cursor: pointer;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 2%;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--neutral-color-darkBlue);
+}
+
+/* MEDIA */
+
+@media (max-width: 768px) {
+    main.container-flex {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 90%;
+        height: 100%;
+    }
+
+    main .img-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    main .img-preview {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        height: inherit;
+    }
+
+    .product-preview {
+        width: 90%;
+        /* ocupa 90% da tela */
+    }
+
+    .product-preview p {
+        padding: 20px 0;
+    }
+}
